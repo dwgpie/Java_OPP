@@ -1,0 +1,7 @@
+package dtvacv;
+import java.util.*;
+
+interface HINH {
+	void dientich();
+	void chuvi();
+}

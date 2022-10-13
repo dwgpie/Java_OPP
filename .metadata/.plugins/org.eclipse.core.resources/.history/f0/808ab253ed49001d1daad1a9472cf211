@@ -1,0 +1,10 @@
+package tiendien;
+
+public class TIENDIEN {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

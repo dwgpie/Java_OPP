@@ -1,0 +1,118 @@
+package bttiendien;
+
+import java.util.Scanner;
+
+  class KHACHHANG{
+	protected  String makh;
+	protected String hoten;
+	protected int ngayhoadon;
+	protected int soluongdien;
+	protected int  donggia;
+	
+	public KHACHHANG(String a, String b, int c, int e, int f) {
+		this.makh=a;
+		this.hoten=b;
+		this.ngayhoadon=c;
+		this.soluongdien=e;
+		this.donggia=f;
+	}
+
+	public String getMakh() {
+		return makh;
+	}
+
+	public void setMakh(String makh) {
+		this.makh = makh;
+	}
+
+	public  String getHoten() {
+		return hoten;
+	}
+
+	public void setHoten(String hoten) {
+		this.hoten = hoten;
+	}
+
+	public int getNgayhoadon() {
+		return ngayhoadon;
+	}
+
+	public void setNgayhoadon(int ngayhoadon) {
+		this.ngayhoadon = ngayhoadon;
+	}
+
+
+	public int getSoluongdien() {
+		return soluongdien;
+	}
+
+	public void setSoluongdien(int soluongdien) {
+		this.soluongdien = soluongdien;
+	}
+
+	public int getDonggia() {
+		return donggia;
+	}
+
+	public void setDonggia(int donggia) {
+		this.donggia = donggia;
+	}
+
+
+	public String toString() {
+		return "MAKH: " + makh + ", TEN: " + hoten + ", NGAY: " + ngayhoadon +  ", SOLUONGDIEN: " + soluongdien + ", DONGIA: " + donggia ;
+	}
+	void nhap() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter MAKH: ");
+		this.makh = sc.nextLine();
+		System.out.println("Enter TEN: ");
+		this.hoten = sc.nextLine();
+		System.out.println("Enter NGAY: ");
+		this.ngayhoadon = sc.nextInt();
+		System.out.println("Enter SOLUONGDIEN: ");
+		this.soluongdien = sc.nextInt();
+		System.out.println("Enter DONGIA: ");
+		this.donggia = sc.nextInt();
+	}
+	void in() {
+		System.out.println("MAKH: " + makh + ", TEN: " + hoten + ", NGAY: " + ngayhoadon +", SOLUONGDIEN: " + soluongdien + ", DONGIA: " + donggia );
+	}
+	
+}
+class KHVIETNAM extends KHACHHANG{
+	
+	private String doituongKH;
+	
+	KHVIETNAM(String a, String b, int c, int e, int f,String doituongKH){
+		super(a,b,c,e,f);
+		this.doituongKH=doituongKH;
+	}
+	public String getDoituongKH() {
+		return doituongKH;
+	}
+	public void setDoituongKH(String doituongKH) {
+		this.doituongKH = doituongKH;
+	}
+	void nhap() {
+		Scanner sc = new Scanner(System.in);
+		super.nhap();
+		System.out.println("Enter DOITUONGKH:");
+		doituongKH=sc.nextLine();
+	}
+	void in() {
+		super.in();
+		
+	}
+	
+	
+	
+}
+public class Tiendien {
+
+	public static void main(String[] args) {
+		KHVIETNAM n= new KHVIETNAM();
+		n.nhap();
+	}
+
+}

@@ -1,0 +1,26 @@
+package dtvacv;
+
+public class HINHCHUNHAT extends HINH1 implements HINH {
+	
+	private double chieudai;
+	private double chieurong;
+	HINHCHUNHAT(){
+		
+	}
+	HINHCHUNHAT(double chieudai, double chieurong){
+		this.chieudai=chieudai;
+		this.chieurong=chieurong;
+	}
+	
+	@Override
+	public void dientich() {
+		System.out.println("Dien tich hinh chu nhat:"+ (chieudai*chieurong));
+	}
+
+	@Override
+	public void chuvi() {
+		System.out.println("Chu vi hinh tron:"+ ((chieudai+chieurong)*2));
+	}
+	
+	
+}

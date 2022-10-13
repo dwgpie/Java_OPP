@@ -1,0 +1,36 @@
+package dtvacv;
+
+import java.util.*;
+public class HINHTRON extends HINH1 implements HINH {
+	
+	private double PI=Math.PI;
+	private double bankinh;
+	HINHTRON(){
+		
+	}
+	HINHTRON(double PI, double bankinh){
+		this.PI=PI;
+		this.bankinh=bankinh;
+	}
+	
+	@Override
+	public void dientich() {
+		System.out.println("Dien tich hinh tron:"+ (bankinh*bankinh*PI));
+	}
+
+	@Override
+	public void chuvi() {
+		System.out.println("Chu vi hinh tron:"+ (2*bankinh*PI));
+	}
+	void nhap() {
+		Scanner sc= new Scanner(System.in);
+		super.nhap();
+		System.out.println("Nhap ban kinh:"); bankinh=sc.nextDouble();
+	}
+	void in() {
+		super.in();
+		chuvi();
+		dientich();
+	}
+	
+}

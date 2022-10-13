@@ -1,0 +1,6 @@
+package dtvacv;
+
+interface HINH {
+	void dientich();
+	void chuvi();
+}

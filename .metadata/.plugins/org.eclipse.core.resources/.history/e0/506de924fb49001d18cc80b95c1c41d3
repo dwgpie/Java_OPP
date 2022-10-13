@@ -1,0 +1,30 @@
+package dtvacv;
+
+abstract class HINH1 {
+	protected String mahinh;
+	protected String tenhinh;
+	HINH1(){
+		
+	}
+	HINH1(String mahinh, String tenhinh){
+		this.mahinh=mahinh;
+		this.tenhinh=tenhinh;
+	}
+	public String getMahinh() {
+		return mahinh;
+	}
+	public void setMahinh(String mahinh) {
+		this.mahinh = mahinh;
+	}
+	public String getTenhinh() {
+		return tenhinh;
+	}
+	public void setTenhinh(String tenhinh) {
+		this.tenhinh = tenhinh;
+	}
+	@Override
+	public String toString() {
+		return "mahinh=" + mahinh + ", tenhinh=" + tenhinh ;
+	}
+	
+}
